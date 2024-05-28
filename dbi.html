@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+<head>
+    <title>wawa page</title>
+    <style>
+        #photo {
+            display: none;
+            margin-top: 20px;
+            width:25%;
+            height:25%;
+        }
+    </style>
+</head>
+<body>
+    <p>Web applications interact with back-end databases through a series of steps that involve both client-side and server-side operations. Here's an overview of how this interaction typically works: </p>
+
+        <p> 1. Client-Side Request
+        User Action: The user performs an action on the web application (e.g., clicking a button, submitting a form).
+        HTTP Request: The client (usually a web browser) sends an HTTP request to the server. This request can be a GET request (to retrieve data) or a POST request (to send data). </p>
+        <p>2. Server-Side Processing
+        Web Server: The HTTP request is received by the web server (e.g., Apache, Nginx). The web server forwards the request to the web application.
+        Application Logic: The web application (often built using frameworks like Django, Flask for Python; Express for Node.js; Spring for Java) processes the request. This can involve:
+        Routing: Determining which part of the application should handle the request.
+        Business Logic: Executing the necessary logic (e.g., validating input data, applying business rules). </p>
+        <p>3. Database Interaction
+        Database Query: If the request involves data storage or retrieval, the application interacts with the back-end database. This is done using SQL for relational databases (e.g., MySQL, PostgreSQL) or query languages for NoSQL databases (e.g., MongoDB). </p>
+        
+        <p> ORM: Many applications use Object-Relational Mapping (ORM) tools (e.g., SQLAlchemy for Python, Hibernate for Java) to interact with the database in an abstracted way.
+        Direct SQL Queries: Alternatively, applications can execute raw SQL queries directly.
+        Data Processing: The database processes the query and returns the requested data or confirmation of the operation (e.g., data inserted, updated). </p>
+        
+        <p>4. Server-Side Response
+        Data Handling: The application processes the data returned from the database, formats it as needed (e.g., converting it to JSON).
+        HTTP Response: The application sends an HTTP response back to the client. This response contains the requested data (for GET requests) or a status message (for POST requests). </p>
+        <p>5. Client-Side Handling
+        Response Handling: The client's web browser receives the HTTP response.
+        UI Update: The web application updates the user interface based on the response (e.g., displaying retrieved data, showing a success message). </p>
+        <p>Example Workflow 
+        Here's a simple example of how this might work in a web application: </p>
+        
+        <p> User: Fills out a form to add a new item to a to-do list and clicks "Submit." </p>
+            <p> Client-Side: The browser sends a POST request to the server with the form data. </p>
+                <p> Server-Side:
+                    <p> The web server routes the request to the appropriate handler in the web application. </p>
+                        <p>The handler validates the form data. </p>
+                            <p>The handler constructs an SQL INSERT query to add the new item to the database. </p>
+                                <p>The handler executes the query using an ORM or raw SQL. </p>
+                                    <p>The database confirms the insertion. </p>
+                                        <p>The handler sends a response back to the client indicating success. </p>
+                                            <p>Client-Side: The browser updates the UI to reflect the new item in the to-do list. </p>
+        Technologies Involved
+        <p>Front-End: HTML, CSS, JavaScript, front-end frameworks/libraries (e.g., React, Angular, Vue.js). </p>
+            <p>Back-End: Server-side languages (e.g., Python, JavaScript, Java), back-end frameworks (e.g., Django, Express, Spring). </p>
+                <p>Database: Relational databases (e.g., MySQL, PostgreSQL) or NoSQL databases (e.g., MongoDB). </p>
+                    <p>Communication: HTTP/HTTPS protocols for request and response, RESTful APIs, GraphQL for more complex data querying. </p>
+                        <p>This process allows web applications to interact dynamically with databases, providing a seamless experience for the user. </p>
+        
+        
+        
+        
+        
+        
+                        </p>
+    <img id="photo" src="Database.jpeg" alt="Photo">
+    <script>
+            document.getElementById('photo').style.display = 'block';
+    </script>
+</body>
+</html>
